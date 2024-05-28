@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/opensans.ttf');
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../font/notoserif.ttf');
+}
+
+* {
+    font-family: 'Open Sans';
+}
+
+:root {
+    --color-primary: #dd9198;
+}
+
+.mnc-nav-link {
+    border-radius: 4px;
+}
+
+.mnc-nav-link:hover {
+    color: var(--color-primary);
+}
