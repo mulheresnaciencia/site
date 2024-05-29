@@ -8,12 +8,22 @@
     src: url('../font/notoserif.ttf');
 }
 
-* {
-    font-family: 'Open Sans';
+:root {
+    --size-nav: 76px;
+    --color-primary: #dd9198;
+    --color-secondary: #7b1da3;
+    --color-white: #ffffff;
+    --color-grad: linear-gradient(35deg, var(--color-primary) 40%, var(--color-secondary));
+    --color-grad-invert: linear-gradient(-35deg, var(--color-primary) 40%, var(--color-secondary));
 }
 
-:root {
-    --color-primary: #dd9198;
+* {
+    font-family: 'Open Sans';
+    scroll-margin-top: var(--size-nav);
+}
+
+.mnc-navbar {
+    min-height: var(--size-nav);
 }
 
 .mnc-nav-link {
@@ -22,4 +32,50 @@
 
 .mnc-nav-link:hover {
     color: var(--color-primary);
+}
+
+.mnc-serif {
+    font-family: 'Noto Serif';
+}
+
+.mnc-img-box-h {
+    width: 100%;
+    height: 100%;
+    max-width: 560px;
+    max-height: 400px;
+}
+
+.mnc-img-box-v {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 400px;
+    max-height: 600px;
+}
+
+.mnc-img {
+    width: 100%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    margin-top: var(--size-nav);
+}
+
+#inicio {
+    background: var(--color-grad);
+    color: var(--color-white);
+}
+
+#cientistas> :nth-child(odd) {
+    background: var(--color-grad-invert);
+    color: var(--color-white);
+}
+
+#cientistas> :nth-child(odd)>div {
+    flex-direction: row-reverse;
+}
+
+#cientistas> :nth-child(3n) {
+    background: var(--color-grad)
 }
